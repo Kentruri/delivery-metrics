@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: metrics
+          POSTGRES_PASSWORD: metrics
+          POSTGRES_DB: metrics_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U metrics"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec biome ci .
+      - run: pnpm --filter @cloudnonic/delivery-contracts build
+      - run: pnpm typecheck
+      - run: pnpm test:coverage
+        env:
+          TEST_DATABASE_URL: postgres://metrics:metrics@localhost:5432/metrics_test
+      - run: pnpm --filter @cloudnonic/delivery-metrics-web build
+      - name: No hardcoded deploy hosts
+        run: '! grep -rnE "onrender\.com|netlify\.app|vercel\.app" apps packages --include=*.ts --include=*.tsx --exclude-dir=node_modules --exclude-dir=dist'
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t delivery-metrics-api:ci .
+      - name: Image runs as a non-root user
+        run: test "$(docker inspect --format '{{.Config.User}}' delivery-metrics-api:ci)" = "node"
