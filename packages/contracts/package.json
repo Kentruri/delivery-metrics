@@ -1,0 +1,35 @@
+{
+  "name": "@cloudnonic/delivery-contracts",
+  "version": "0.0.0",
+  "description": "Zod schemas and endpoint definitions shared by the delivery metrics API and web.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kentruri/delivery-metrics.git",
+    "directory": "packages/contracts"
+  },
+  "devDependencies": {
+    "zod": "^4.6.7"
+  },
+  "peerDependencies": {
+    "zod": "^4.6.7"
+  }
+}
