@@ -1,6 +1,6 @@
 {
   "name": "@cloudnonic/delivery-contracts",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Zod schemas and endpoint definitions shared by the delivery metrics API and web.",
   "type": "module",
   "exports": {
