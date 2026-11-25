@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-ground: #f7f7f7;
+  --color-panel: #ffffff;
+  --color-ink: #0d1a55;
+  --color-body: #3c4366;
+  --color-muted: #5f6684;
+  --color-line: #e3e5ee;
+  --color-line-strong: #c9cddd;
+  --color-highlight: #e9ecf6;
+  --color-previous: #a8aec6;
+
+  --color-clean: #1d7348;
+  --color-clean-tint: #e3f2ea;
+  --color-watch: #8a5a00;
+  --color-watch-tint: #fbf1dc;
+  --color-failed: #b42318;
+  --color-failed-tint: #fcebe9;
+
+  --radius-panel: 12px;
+  --radius-block: 8px;
+  --radius-control: 6px;
+  --radius-inset: 4px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@utility bg-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--color-line-strong) 0 1px,
+    transparent 1px 6px
+  );
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ground);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+
+  ::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-ink);
+  }
+
+  * {
+    caret-color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+}
+
+@keyframes arrive {
+  0%,
+  30% {
+    background-color: var(--color-highlight);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+[data-deploy-row]:target {
+  animation: arrive 1.2s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-deploy-row]:target {
+    animation: none;
+    background-color: var(--color-highlight);
+  }
+}

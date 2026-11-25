@@ -1,0 +1,27 @@
+{
+  "name": "@cloudnonic/delivery-metrics-api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=../../.env src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "sync": "tsx --env-file-if-exists=../../.env src/cli/sync.ts",
+    "sync:built": "node dist/cli/sync.js",
+    "hash-password": "tsx src/cli/hashPassword.ts"
+  },
+  "dependencies": {
+    "@cloudnonic/delivery-contracts": "workspace:*",
+    "fastify": "^5.12.7",
+    "fastify-type-provider-zod": "^7.0.0",
+    "postgres": "^4.1.0",
+    "zod": "^4.6.7"
+  }
+}

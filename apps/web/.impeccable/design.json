@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T21:53:03.360Z",
+  "title": "Design System: Delivery Metrics",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Cloudnonic Navy",
+        "canonical": "#0d1a55",
+        "tonalRamp": [
+          "#020035",
+          "#0f1d58",
+          "#293d7b",
+          "#475d9e",
+          "#667fc3",
+          "#88a2e9",
+          "#b2c8ff",
+          "#e7eeff"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Deep Slate",
+        "canonical": "#3c4366",
+        "tonalRamp": [
+          "#060724",
+          "#1d2242",
+          "#383f62",
+          "#575f84",
+          "#7780a7",
+          "#99a3cb",
+          "#bdc7f1",
+          "#e9eeff"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Faded Slate",
+        "canonical": "#5f6684",
+        "tonalRamp": [
+          "#06081f",
+          "#1e233c",
+          "#3a405c",
+          "#595f7d",
+          "#7981a0",
+          "#9ba3c4",
+          "#bfc7e9",
+          "#e9eeff"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Paper Grey",
+        "canonical": "#f7f7f7",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Navy Hairline",
+        "canonical": "#e3e5ee",
+        "tonalRamp": [
+          "#0a0b10",
+          "#23252b",
+          "#404249",
+          "#5f6168",
+          "#80828a",
+          "#a3a4ad",
+          "#c7c9d1",
+          "#eceef7"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Navy Rule",
+        "canonical": "#c9cddd",
+        "tonalRamp": [
+          "#080a15",
+          "#222430",
+          "#3e414e",
+          "#5d606e",
+          "#7e8290",
+          "#a0a4b4",
+          "#c4c8d8",
+          "#eaeefe"
+        ]
+      },
+      "highlight": {
+        "role": "neutral",
+        "displayName": "Navy Wash",
+        "canonical": "#e9ecf6",
+        "tonalRamp": [
+          "#090b11",
+          "#23252c",
+          "#3f424a",
+          "#5e6169",
+          "#7f828b",
+          "#a2a5ae",
+          "#c6c9d2",
+          "#ebeef8"
+        ]
+      },
+      "clean": {
+        "role": "state",
+        "displayName": "Pine Green",
+        "canonical": "#1d7348",
+        "tonalRamp": [
+          "#001005",
+          "#002e18",
+          "#00502d",
+          "#1c7348",
+          "#459568",
+          "#69b98a",
+          "#8ddead",
+          "#c4ffd9"
+        ]
+      },
+      "watch": {
+        "role": "state",
+        "displayName": "Ochre Amber",
+        "canonical": "#8a5a00",
+        "tonalRamp": [
+          "#130900",
+          "#352000",
+          "#5b3a00",
+          "#845600",
+          "#a9772e",
+          "#ce9a53",
+          "#f4be77",
+          "#ffebd2"
+        ]
+      },
+      "failed": {
+        "role": "state",
+        "displayName": "Brick Red",
+        "canonical": "#b42318",
+        "tonalRamp": [
+          "#1f0000",
+          "#4d0000",
+          "#810100",
+          "#b12015",
+          "#da4a3b",
+          "#ff7461",
+          "#ffb3a7",
+          "#ffe9e5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The verdict sentence, one per page, navy; 2.5rem from 1024px, 2.125rem from 640px, 1.75rem below; balanced wrap."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Digest claims in Deep Slate; each claim's subject is a navy link at 600."
+      },
+      "row-title": {
+        "displayName": "Row title",
+        "purpose": "The service name that opens a deploy row, and the first line of an empty state."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Section headings and the period label; also the period's current values (tabular) and the wordmark's product name (tracked -0.01em)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Metric labels in the period rail and the explanation in an empty state."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Control text and verdict labels; verdicts take tabular figures."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Metadata lines, API status, notice band, comparison labels and printed rules (rules at line-height 1.625); versions at 500."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Column headings and previous-period values (tabular)."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "The only easing curve: every colour transition, the press and the arrival keyframe."
+      },
+      {
+        "name": "duration-state",
+        "value": "150ms",
+        "purpose": "Colour transitions on hover, selection and the linked highlight."
+      },
+      {
+        "name": "press",
+        "value": "scale: 0.97",
+        "purpose": "Press feedback on the org segments, applied only under prefers-reduced-motion: no-preference."
+      },
+      {
+        "name": "arrive",
+        "value": "arrive 1.2s cubic-bezier(0.23, 1, 0.32, 1); keyframes: Navy Wash from 0% to 30%, transparent at 100%",
+        "purpose": "A deploy row reached through its claim link (:target). Under reduced motion the row stays washed, without animation."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Org Switch",
+      "kind": "input",
+      "refersTo": "segment",
+      "description": "Segmented radio control that picks the organization; the selected segment fills navy, hover turns text navy, press scales to 0.97 behind motion-safe.",
+      "html": "<fieldset class=\"ds-seg\"><legend class=\"ds-seg-hidden\">Organization</legend><label class=\"ds-seg-option\"><input class=\"ds-seg-hidden\" type=\"radio\" name=\"ds-seg-org\" checked><span>Tensorparc</span></label><label class=\"ds-seg-option\"><input class=\"ds-seg-hidden\" type=\"radio\" name=\"ds-seg-org\"><span>Go-Medicus</span></label></fieldset>",
+      "css": ".ds-seg { font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-seg-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .ds-seg { display: inline-flex; margin: 0; padding: 2px; border: 1px solid var(--color-line, #e3e5ee); border-radius: var(--radius-control, 6px); } .ds-seg-option { cursor: pointer; } .ds-seg-option span { display: block; padding: 6px 12px; border-radius: var(--radius-inset, 4px); font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--color-body, #3c4366); transition: background-color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), scale 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-seg-option:hover span { color: var(--color-ink, #0d1a55); } .ds-seg-option input:checked + span { background-color: var(--color-ink, #0d1a55); color: var(--color-panel, #ffffff); } .ds-seg-option input:focus-visible + span { outline: 2px solid var(--color-ink, #0d1a55); outline-offset: 2px; } @media (prefers-reduced-motion: no-preference) { .ds-seg-option span:active { scale: 0.97; } }"
+    },
+    {
+      "name": "Environment Select",
+      "kind": "input",
+      "refersTo": "select",
+      "description": "Native select on white with a 1px navy-tinted hairline, 6px corners and a bold navy caret; its Meta label sits 8px before it.",
+      "html": "<label class=\"ds-env\">Environment <span class=\"ds-env-wrap\"><select class=\"ds-env-select\"><option>Production</option><option>Staging</option><option>Develop</option></select><svg class=\"ds-env-caret\" viewBox=\"0 0 256 256\" width=\"12\" height=\"12\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z\"/></svg></span></label>",
+      "css": ".ds-env { font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-env { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; line-height: 1.5; color: var(--color-muted, #5f6684); } .ds-env-wrap { position: relative; display: inline-flex; } .ds-env-select { appearance: none; -webkit-appearance: none; margin: 0; padding: 6px 32px 6px 10px; border: 1px solid var(--color-line, #e3e5ee); border-radius: var(--radius-control, 6px); background-color: var(--color-panel, #ffffff); font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--color-ink, #0d1a55); } .ds-env-select:focus-visible { outline: 2px solid var(--color-ink, #0d1a55); outline-offset: 2px; } .ds-env-caret { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: var(--color-ink, #0d1a55); pointer-events: none; }"
+    },
+    {
+      "name": "Board Header",
+      "kind": "nav",
+      "refersTo": "header-bar",
+      "description": "White bar with a hairline bottom edge: Cloudnonic wordmark, org switch, environment select and the API status pushed right from 640px.",
+      "html": "<header class=\"ds-hdr\"><a class=\"ds-hdr-mark\" href=\"#\"><svg viewBox=\"0 0 1948 985\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M856.374 0.93641C762.997 8.30741 675.279 41.6634 598.874 98.8554C513.14 163.03 446.93 261.125 419.912 364.002C393.445 464.78 399.142 572.794 435.885 666.829C470.336 755.001 527.008 829.344 602.874 885.888C678.157 941.998 764.512 974.307 859.374 981.855C873.882 983.009 1228.31 984.66 1484.88 984.768C1607.69 984.82 1631.87 984.599 1642.88 983.327C1726.83 973.626 1810.45 928.713 1864.44 864.329C1912.66 806.833 1939.24 744.271 1946.46 671.329C1947.97 656.128 1947.97 618.718 1946.47 604.329C1940.84 550.298 1923.88 501.471 1894.21 453.867C1845.22 375.257 1761.96 317.805 1670.37 299.412C1642.21 293.756 1608.99 291.343 1579.37 292.803C1559.99 293.758 1552.91 295.524 1548.17 300.582C1543.94 305.097 1524.44 336.245 1523.78 339.531C1523.29 341.989 1523.75 343.216 1526.15 345.909L1529.13 349.243L1549.5 347.982C1595.96 345.107 1604.01 344.855 1619.07 345.811C1659.46 348.376 1690.87 356.722 1727.87 374.728C1790.62 405.258 1833.83 447.552 1863.35 507.329C1895.56 572.562 1903.56 641.146 1886.76 708.001C1868.01 782.593 1826.37 841.511 1761.9 884.65C1743.21 897.161 1716.66 910.192 1695.83 917.081C1667.04 926.604 1647.63 930.04 1612.66 931.803C1570.8 933.915 931.358 932.18 877.664 929.81C843.386 928.297 817.255 924.452 784.874 916.158C691.386 892.213 603.782 833.257 544.408 754.329C505.359 702.419 477.036 639.071 463.932 574.332C443.821 474.98 462.718 362.271 514.651 271.829C556.948 198.166 627.737 132.799 705.874 95.2544C819.827 40.4984 958.845 38.2553 1070.36 89.3723C1085.22 96.1823 1099.42 104.133 1115.87 114.852C1134.62 127.067 1148.8 134.867 1153.46 135.535C1155.74 135.862 1158.21 135.447 1160.24 134.396C1166.71 131.052 1177.93 112.37 1180.27 101.041C1181.63 94.4954 1180.15 90.2553 1175.23 86.5963C1169.59 82.4013 1141.64 65.5363 1127.78 57.9673C1068 25.3173 1001.19 6.03738 929.874 0.854379C913.693 -0.320621 871.714 -0.27459 856.374 0.93641ZM1354.87 17.4493C1319.83 20.1533 1282.05 31.7344 1255.87 47.7914C1217.33 71.4404 1188.51 113.335 1178.32 160.541C1175.22 174.862 1174.5 205.352 1176.85 222.054C1183.01 265.826 1199.86 299.803 1229.59 328.423C1252.44 350.412 1281.42 365.341 1315.32 372.576C1326.96 375.061 1329.63 375.256 1351.87 375.254C1372.97 375.251 1377.11 374.981 1386.15 373.016C1401.43 369.693 1411.58 366.271 1424.23 360.182C1430.48 357.175 1435.76 354.885 1435.97 355.091C1436.18 355.298 1401.46 411.461 1358.82 479.898C1286.34 596.229 1281.45 604.371 1283.58 604.979C1284.84 605.337 1298.35 605.674 1313.61 605.729L1341.34 605.829L1344.29 603.079C1346.82 600.718 1421.55 478.248 1483.88 374.329C1542.01 277.391 1552.58 252.031 1554.1 205.715C1554.91 180.84 1551.77 156.994 1544.96 136.329C1541.11 124.66 1530.36 103.68 1522.92 93.3294C1496.02 55.8944 1445.81 26.6733 1395.87 19.3873C1385.3 17.8443 1363.26 16.8023 1354.87 17.4493ZM1398.37 66.1764C1423.91 72.1924 1442.93 82.1243 1460.5 98.6073C1480.15 117.054 1492.43 140.683 1497.48 169.799C1500.07 184.69 1500.25 206.409 1497.9 220.329C1488.63 275.259 1447.8 317.65 1392.29 329.978C1383.71 331.883 1378.96 332.291 1365.37 332.288C1346.9 332.284 1338.71 330.978 1321.7 325.321C1243.24 299.22 1207.47 209.415 1244.82 132.329C1256 109.263 1275.44 89.4024 1297.94 78.0474C1310.23 71.8434 1333.99 64.8974 1347.87 63.4484C1350.07 63.2184 1359.97 63.1813 1369.87 63.3663C1384.71 63.6433 1389.72 64.1374 1398.37 66.1764ZM282.374 365.417C267.741 366.654 254.534 368.256 244.874 369.963C188.29 379.967 140.323 404.254 96.8187 444.928C27.3107 509.915 -4.25921 586.404 0.459791 678.392C3.89579 745.366 23.1197 799.16 61.3687 848.829C70.9727 861.301 101.064 891.17 114.548 901.616C163.951 939.889 215.355 959.978 276.374 964.86C286.587 965.677 346.935 966.066 480.47 966.175C684.105 966.34 673.379 966.603 673.37 961.457C673.361 956.208 669.836 953.399 639.429 934.413L609.161 915.514L601.017 914.734C596.539 914.306 560.249 913.88 520.374 913.788C480.499 913.697 408.049 913.27 359.374 912.84L270.874 912.059L256.874 909.497C217.67 902.321 184.894 887.766 151.103 862.526C96.6197 821.83 65.5248 768.928 54.8878 698.829C52.5998 683.752 51.8438 656.766 53.3048 642.329C56.4688 611.066 64.5688 582.913 78.4548 554.908C102.263 506.894 142.18 467.104 189.874 443.846C240.471 419.171 291.203 412.188 345.682 422.4C352.727 423.72 363.387 425.098 369.371 425.461C386.964 426.53 388.663 424.993 390.927 405.965C393.432 384.914 392.742 380.742 386.23 377.551C381.548 375.257 358.829 370.274 341.468 367.734C328.479 365.833 293.616 364.466 282.374 365.417Z\"/></svg><span>Delivery Metrics</span></a><fieldset class=\"ds-hdr-seg\"><legend class=\"ds-hdr-hidden\">Organization</legend><label class=\"ds-hdr-option\"><input class=\"ds-hdr-hidden\" type=\"radio\" name=\"ds-hdr-org\" checked><span>Tensorparc</span></label><label class=\"ds-hdr-option\"><input class=\"ds-hdr-hidden\" type=\"radio\" name=\"ds-hdr-org\"><span>Go-Medicus</span></label></fieldset><label class=\"ds-hdr-env\">Environment <span class=\"ds-hdr-env-wrap\"><select class=\"ds-hdr-select\"><option>Production</option><option>Staging</option></select><svg class=\"ds-hdr-caret\" viewBox=\"0 0 256 256\" width=\"12\" height=\"12\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z\"/></svg></span></label><p class=\"ds-hdr-status\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M160,36A92.09,92.09,0,0,0,79,84.36,68,68,0,1,0,72,220h88a92,92,0,0,0,0-184Zm0,160H72a44,44,0,0,1-1.82-88A91.86,91.86,0,0,0,68,128a12,12,0,0,0,24,0,68,68,0,1,1,68,68Zm40.49-92.49a12,12,0,0,1,0,17l-48,48a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L144,143l39.51-39.52A12,12,0,0,1,200.49,103.51Z\"/></svg>API reachable</p></header>",
+      "css": ".ds-hdr { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 12px 24px; background-color: var(--color-panel, #ffffff); border-bottom: 1px solid var(--color-line, #e3e5ee); font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-hdr-mark { display: flex; align-items: center; gap: 10px; border-radius: var(--radius-inset, 4px); color: var(--color-ink, #0d1a55); text-decoration: none; } .ds-hdr-mark:focus-visible { outline: 2px solid var(--color-ink, #0d1a55); outline-offset: 2px; } .ds-hdr-mark svg { height: 18px; width: auto; } .ds-hdr-mark span { font-size: 15px; font-weight: 600; line-height: 1.5; letter-spacing: -0.01em; } .ds-hdr-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .ds-hdr-seg { display: inline-flex; margin: 0; padding: 2px; border: 1px solid var(--color-line, #e3e5ee); border-radius: var(--radius-control, 6px); } .ds-hdr-option { cursor: pointer; } .ds-hdr-option span { display: block; padding: 6px 12px; border-radius: var(--radius-inset, 4px); font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--color-body, #3c4366); transition: background-color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), scale 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-hdr-option:hover span { color: var(--color-ink, #0d1a55); } .ds-hdr-option input:checked + span { background-color: var(--color-ink, #0d1a55); color: var(--color-panel, #ffffff); } .ds-hdr-option input:focus-visible + span { outline: 2px solid var(--color-ink, #0d1a55); outline-offset: 2px; } @media (prefers-reduced-motion: no-preference) { .ds-hdr-option span:active { scale: 0.97; } } .ds-hdr-env { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; line-height: 1.5; color: var(--color-muted, #5f6684); } .ds-hdr-env-wrap { position: relative; display: inline-flex; } .ds-hdr-select { appearance: none; -webkit-appearance: none; margin: 0; padding: 6px 32px 6px 10px; border: 1px solid var(--color-line, #e3e5ee); border-radius: var(--radius-control, 6px); background-color: var(--color-panel, #ffffff); font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--color-ink, #0d1a55); } .ds-hdr-select:focus-visible { outline: 2px solid var(--color-ink, #0d1a55); outline-offset: 2px; } .ds-hdr-caret { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: var(--color-ink, #0d1a55); pointer-events: none; } .ds-hdr-status { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 13px; line-height: 1.5; color: var(--color-muted, #5f6684); } @media (min-width: 640px) { .ds-hdr-status { margin-left: auto; } }"
+    },
+    {
+      "name": "Notice Band",
+      "kind": "custom",
+      "refersTo": "notice-band",
+      "description": "Full-width Navy Wash band under the header that names a board-wide condition, such as sample data.",
+      "html": "<p class=\"ds-notice\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M108,84a16,16,0,1,1,16,16A16,16,0,0,1,108,84Zm128,44A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Zm-72,36.68V132a20,20,0,0,0-20-20,12,12,0,0,0-4,23.32V168a20,20,0,0,0,20,20,12,12,0,0,0,4-23.32Z\"/></svg>Sample data: real deploys appear here after the first sync.</p>",
+      "css": ".ds-notice { display: flex; align-items: center; gap: 8px; margin: 0; padding: 8px 24px; background-color: var(--color-highlight, #e9ecf6); border-bottom: 1px solid var(--color-line, #e3e5ee); font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); font-size: 13px; line-height: 1.5; color: var(--color-ink, #0d1a55); } .ds-notice svg { flex-shrink: 0; }"
+    },
+    {
+      "name": "Deploy Digest",
+      "kind": "custom",
+      "refersTo": "claim",
+      "description": "The answer in words: a navy display sentence, then claims whose linked subjects jump to the row that proves them; an active claim washes Navy Wash.",
+      "html": "<section class=\"ds-digest\"><h1 class=\"ds-digest-verdict\">Production looks fine so far; an earlier belture-frontend deploy needed a hotfix.</h1><ul class=\"ds-digest-claims\"><li class=\"ds-digest-claim\"><a href=\"#ds-ev-row-1\">belture-api 3.99.0</a> reached production 3 hours ago. No new errors so far, with 68 hours of its watch left.</li><li class=\"ds-digest-claim is-active\"><a href=\"#ds-ev-row-2\">belture-frontend 3.112.0</a> shipped Monday at 14:36 and needed a hotfix 48 hours later (3.112.1), so it counts as failed.</li></ul></section>",
+      "css": ".ds-digest { display: grid; gap: 24px; font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-digest-verdict { margin: 0; font-size: 1.75rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; text-wrap: balance; color: var(--color-ink, #0d1a55); } .ds-digest-claims { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; font-size: 1.0625rem; line-height: 1.625; color: var(--color-body, #3c4366); } .ds-digest-claim { margin: 0 -12px; padding: 8px 12px; border-radius: var(--radius-block, 8px); transition: background-color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-digest-claim.is-active, .ds-digest-claim:has(a:hover), .ds-digest-claim:has(a:focus) { background-color: var(--color-highlight, #e9ecf6); } .ds-digest-claim a { font-weight: 600; color: var(--color-ink, #0d1a55); text-decoration-line: underline; text-decoration-color: var(--color-line-strong, #c9cddd); text-decoration-thickness: 1px; text-underline-offset: 0.22em; transition: text-decoration-color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-digest-claim a:hover { text-decoration-color: var(--color-ink, #0d1a55); } .ds-digest-claim a:focus-visible { outline: 2px solid var(--color-ink, #0d1a55); outline-offset: 2px; } @media (min-width: 640px) { .ds-digest-verdict { font-size: 2.125rem; } } @media (min-width: 1024px) { .ds-digest { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; } .ds-digest-verdict, .ds-digest-claims { grid-column: span 6; } .ds-digest-verdict { font-size: 2.5rem; } .ds-digest-claims { padding-top: 4px; } }"
+    },
+    {
+      "name": "Evidence Rows",
+      "kind": "custom",
+      "refersTo": "deploy-row",
+      "description": "Open list of deploys on hairlines: identity, verdict and 72-hour window on three tracks from 640px; hover and the arrival highlight wash a row in Navy Wash.",
+      "html": "<div class=\"ds-ev\"><div class=\"ds-ev-head\" aria-hidden=\"true\"><span class=\"ds-ev-col\">Deploy</span><span class=\"ds-ev-col\">Verdict</span><div class=\"ds-ev-scale\" aria-hidden=\"true\"><span>0 h</span><span>24 h</span><span>72 h</span></div></div><ol class=\"ds-ev-rows\"><li class=\"ds-ev-row is-active\" id=\"ds-ev-row-1\" tabindex=\"-1\"><div class=\"ds-ev-id\"><p class=\"ds-ev-title\"><span class=\"ds-ev-service\">belture-api</span><span class=\"ds-ev-version\">3.99.0</span></p><p class=\"ds-ev-meta\">3 hours ago, by dev-a via Forge</p></div><span class=\"ds-ev-verdict is-watching\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M251,123.13c-.37-.81-9.13-20.26-28.48-39.61C196.63,57.67,164,44,128,44S59.37,57.67,33.51,83.52C14.16,102.87,5.4,122.32,5,123.13a12.08,12.08,0,0,0,0,9.75c.37.82,9.13,20.26,28.49,39.61C59.37,198.34,92,212,128,212s68.63-13.66,94.48-39.51c19.36-19.35,28.12-38.79,28.49-39.61A12.08,12.08,0,0,0,251,123.13Zm-46.06,33C183.47,177.27,157.59,188,128,188s-55.47-10.73-76.91-31.88A130.36,130.36,0,0,1,29.52,128,130.45,130.45,0,0,1,51.09,99.89C72.54,78.73,98.41,68,128,68s55.46,10.73,76.91,31.89A130.36,130.36,0,0,1,226.48,128,130.45,130.45,0,0,1,204.91,156.12ZM128,84a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,84Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,148Z\"/></svg>Watching, 68 h left</span><div class=\"ds-ev-window\" role=\"img\" aria-label=\"Watch window: 3 h of 72 h elapsed, 0 new errors\"><div class=\"ds-ev-track\"></div><div class=\"ds-ev-elapsed is-watching\" style=\"width: 4%\"></div><div class=\"ds-ev-day\"></div></div></li><li class=\"ds-ev-row\" id=\"ds-ev-row-2\" tabindex=\"-1\"><div class=\"ds-ev-id\"><p class=\"ds-ev-title\"><span class=\"ds-ev-service\">belture-frontend</span><span class=\"ds-ev-version\">3.112.0</span></p><p class=\"ds-ev-meta\">Monday at 14:36, by dev-b via Netlify</p></div><span class=\"ds-ev-verdict is-failed\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm-12-80V80a12,12,0,0,1,24,0v52a12,12,0,0,1-24,0Zm28,40a16,16,0,1,1-16-16A16,16,0,0,1,144,172Z\"/></svg>Failed: hotfix</span><div class=\"ds-ev-window\" role=\"img\" aria-label=\"Watch window: 72 h of 72 h elapsed, 0 new errors\"><div class=\"ds-ev-track\"></div><div class=\"ds-ev-elapsed is-failed\" style=\"width: 100%\"></div><div class=\"ds-ev-day\"></div><div class=\"ds-ev-mark\" style=\"left: 66.6667%\"></div></div></li><li class=\"ds-ev-row\" id=\"ds-ev-row-3\" tabindex=\"-1\"><div class=\"ds-ev-id\"><p class=\"ds-ev-title\"><span class=\"ds-ev-service\">belture-api</span><span class=\"ds-ev-version\">3.98.0</span></p><p class=\"ds-ev-meta\">On 23 Oct, by dev-a via Forge</p></div><span class=\"ds-ev-verdict is-clean\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z\"/></svg>Clean</span><div class=\"ds-ev-window\" role=\"img\" aria-label=\"Watch window: 72 h of 72 h elapsed, 0 new errors\"><div class=\"ds-ev-track\"></div><div class=\"ds-ev-elapsed is-clean\" style=\"width: 100%\"></div><div class=\"ds-ev-day\"></div></div></li><li class=\"ds-ev-row\" id=\"ds-ev-row-4\" tabindex=\"-1\"><div class=\"ds-ev-id\"><p class=\"ds-ev-title\"><span class=\"ds-ev-service\">belture-frontend</span><span class=\"ds-ev-version\">3.104.0</span></p><p class=\"ds-ev-meta\">On 2 Jan, by dev-b via Netlify</p></div><span class=\"ds-ev-verdict is-none\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm84,108a83.6,83.6,0,0,1-16.75,50.28L77.72,60.75A84,84,0,0,1,212,128ZM44,128A83.6,83.6,0,0,1,60.75,77.72L178.28,195.25A84,84,0,0,1,44,128Z\"/></svg>No data</span><div class=\"ds-ev-window\" role=\"img\" aria-label=\"Watch window: no error data for this deploy\"><div class=\"ds-ev-hatch\"></div><div class=\"ds-ev-day\"></div></div></li></ol></div>",
+      "css": ".ds-ev { font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); color: var(--color-body, #3c4366); } .ds-ev-head { display: grid; align-items: end; gap: 12px; padding: 0 12px 8px; font-size: 12px; line-height: 1.5; color: var(--color-muted, #5f6684); } .ds-ev-col { display: none; } .ds-ev-rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--color-line, #e3e5ee); border-bottom: 1px solid var(--color-line, #e3e5ee); } .ds-ev-row { display: grid; gap: 12px; padding: 16px 12px; scroll-margin-top: 24px; transition: background-color 150ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-ev-row + .ds-ev-row { border-top: 1px solid var(--color-line, #e3e5ee); } .ds-ev-row:hover, .ds-ev-row.is-active { background-color: var(--color-highlight, #e9ecf6); } .ds-ev-row:target { animation: ds-ev-arrive 1.2s var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } @keyframes ds-ev-arrive { 0%, 30% { background-color: var(--color-highlight, #e9ecf6); } 100% { background-color: transparent; } } @media (prefers-reduced-motion: reduce) { .ds-ev-row:target { animation: none; background-color: var(--color-highlight, #e9ecf6); } } .ds-ev-id { min-width: 0; } .ds-ev-id p { margin: 0; } .ds-ev-title { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; } .ds-ev-service { font-size: 16px; font-weight: 600; line-height: 1.5; color: var(--color-ink, #0d1a55); } .ds-ev-version { font-size: 13px; font-weight: 500; color: var(--color-body, #3c4366); } .ds-ev-id .ds-ev-meta { margin-top: 4px; font-size: 13px; line-height: 1.5; color: var(--color-muted, #5f6684); } .ds-ev-verdict { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; line-height: 1.5; font-variant-numeric: tabular-nums; } .ds-ev-verdict.is-clean { color: var(--color-clean, #1d7348); } .ds-ev-verdict.is-watching { color: var(--color-watch, #8a5a00); } .ds-ev-verdict.is-failed { color: var(--color-failed, #b42318); } .ds-ev-verdict.is-none { color: var(--color-muted, #5f6684); } .ds-ev-window { position: relative; width: 100%; height: 12px; } .ds-ev-track { position: absolute; left: 0; right: 0; top: 50%; height: 1px; transform: translateY(-50%); background-color: var(--color-line-strong, #c9cddd); } .ds-ev-elapsed { position: absolute; left: 0; top: 50%; transform: translateY(-50%); border-radius: 9999px; } .ds-ev-elapsed.is-watching { height: 3px; background-color: var(--color-watch, #8a5a00); } .ds-ev-elapsed.is-clean { height: 2px; background-color: var(--color-clean, #1d7348); } .ds-ev-elapsed.is-failed { height: 2px; background-color: var(--color-muted, #5f6684); } .ds-ev-hatch { position: absolute; left: 0; right: 0; top: 50%; height: 8px; transform: translateY(-50%); border-radius: var(--radius-inset, 4px); background-image: repeating-linear-gradient(135deg, var(--color-line-strong, #c9cddd) 0 1px, transparent 1px 6px); } .ds-ev-day { position: absolute; top: 2px; left: 33.3333%; width: 1px; height: 8px; background-color: var(--color-line-strong, #c9cddd); } .ds-ev-mark { position: absolute; top: 0; width: 2px; height: 12px; transform: translateX(-50%); border-radius: 9999px; background-color: var(--color-failed, #b42318); } .ds-ev-scale { position: relative; height: 14px; font-size: 11px; line-height: 1; color: var(--color-muted, #5f6684); font-variant-numeric: tabular-nums; } .ds-ev-scale span { position: absolute; } .ds-ev-scale span:nth-child(1) { left: 0; } .ds-ev-scale span:nth-child(2) { left: 33.3333%; transform: translateX(-50%); } .ds-ev-scale span:nth-child(3) { right: 0; } @media (min-width: 640px) { .ds-ev-head, .ds-ev-row { grid-template-columns: minmax(0, 2fr) 10.5rem minmax(0, 1.6fr); gap: 24px; } .ds-ev-row { align-items: center; } .ds-ev-col { display: block; } }"
+    },
+    {
+      "name": "Verdict Label",
+      "kind": "custom",
+      "refersTo": "verdict-watching",
+      "description": "Bold Phosphor icon plus words in the state colour, 13px semibold with tabular figures, on the surface it sits on: clean, watching, failed, no data.",
+      "html": "<div class=\"ds-vl-set\"><span class=\"ds-vl is-clean\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z\"/></svg>Clean</span><span class=\"ds-vl is-watching\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M251,123.13c-.37-.81-9.13-20.26-28.48-39.61C196.63,57.67,164,44,128,44S59.37,57.67,33.51,83.52C14.16,102.87,5.4,122.32,5,123.13a12.08,12.08,0,0,0,0,9.75c.37.82,9.13,20.26,28.49,39.61C59.37,198.34,92,212,128,212s68.63-13.66,94.48-39.51c19.36-19.35,28.12-38.79,28.49-39.61A12.08,12.08,0,0,0,251,123.13Zm-46.06,33C183.47,177.27,157.59,188,128,188s-55.47-10.73-76.91-31.88A130.36,130.36,0,0,1,29.52,128,130.45,130.45,0,0,1,51.09,99.89C72.54,78.73,98.41,68,128,68s55.46,10.73,76.91,31.89A130.36,130.36,0,0,1,226.48,128,130.45,130.45,0,0,1,204.91,156.12ZM128,84a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,84Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,148Z\"/></svg>Watching, 68 h left</span><span class=\"ds-vl is-failed\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm-12-80V80a12,12,0,0,1,24,0v52a12,12,0,0,1-24,0Zm28,40a16,16,0,1,1-16-16A16,16,0,0,1,144,172Z\"/></svg>Failed: hotfix</span><span class=\"ds-vl is-none\"><svg viewBox=\"0 0 256 256\" width=\"16\" height=\"16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm84,108a83.6,83.6,0,0,1-16.75,50.28L77.72,60.75A84,84,0,0,1,212,128ZM44,128A83.6,83.6,0,0,1,60.75,77.72L178.28,195.25A84,84,0,0,1,44,128Z\"/></svg>No data</span></div>",
+      "css": ".ds-vl-set { display: grid; justify-items: start; gap: 12px; font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-vl { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; line-height: 1.5; font-variant-numeric: tabular-nums; } .ds-vl.is-clean { color: var(--color-clean, #1d7348); } .ds-vl.is-watching { color: var(--color-watch, #8a5a00); } .ds-vl.is-failed { color: var(--color-failed, #b42318); } .ds-vl.is-none { color: var(--color-muted, #5f6684); }"
+    },
+    {
+      "name": "Watch Window",
+      "kind": "custom",
+      "refersTo": "watch-window",
+      "description": "A deploy's first 72 hours as one line: 24 h tick at one third, elapsed stroke in the state colour, red ticks for events, a hatch for missing data.",
+      "html": "<div class=\"ds-ww-set\"><div class=\"ds-ww-scale\" aria-hidden=\"true\"><span>0 h</span><span>24 h</span><span>72 h</span></div><div class=\"ds-ww-window\" role=\"img\" aria-label=\"Watch window: 3 h of 72 h elapsed, 0 new errors\"><div class=\"ds-ww-track\"></div><div class=\"ds-ww-elapsed is-watching\" style=\"width: 4%\"></div><div class=\"ds-ww-day\"></div></div><div class=\"ds-ww-window\" role=\"img\" aria-label=\"Watch window: 72 h of 72 h elapsed, 0 new errors\"><div class=\"ds-ww-track\"></div><div class=\"ds-ww-elapsed is-clean\" style=\"width: 100%\"></div><div class=\"ds-ww-day\"></div></div><div class=\"ds-ww-window\" role=\"img\" aria-label=\"Watch window: 72 h of 72 h elapsed, 0 new errors\"><div class=\"ds-ww-track\"></div><div class=\"ds-ww-elapsed is-failed\" style=\"width: 100%\"></div><div class=\"ds-ww-day\"></div><div class=\"ds-ww-mark\" style=\"left: 66.6667%\"></div></div><div class=\"ds-ww-window\" role=\"img\" aria-label=\"Watch window: no error data for this deploy\"><div class=\"ds-ww-hatch\"></div><div class=\"ds-ww-day\"></div></div></div>",
+      "css": ".ds-ww-set { display: grid; gap: 20px; font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-ww-window { position: relative; width: 100%; height: 12px; } .ds-ww-track { position: absolute; left: 0; right: 0; top: 50%; height: 1px; transform: translateY(-50%); background-color: var(--color-line-strong, #c9cddd); } .ds-ww-elapsed { position: absolute; left: 0; top: 50%; transform: translateY(-50%); border-radius: 9999px; } .ds-ww-elapsed.is-watching { height: 3px; background-color: var(--color-watch, #8a5a00); } .ds-ww-elapsed.is-clean { height: 2px; background-color: var(--color-clean, #1d7348); } .ds-ww-elapsed.is-failed { height: 2px; background-color: var(--color-muted, #5f6684); } .ds-ww-hatch { position: absolute; left: 0; right: 0; top: 50%; height: 8px; transform: translateY(-50%); border-radius: var(--radius-inset, 4px); background-image: repeating-linear-gradient(135deg, var(--color-line-strong, #c9cddd) 0 1px, transparent 1px 6px); } .ds-ww-day { position: absolute; top: 2px; left: 33.3333%; width: 1px; height: 8px; background-color: var(--color-line-strong, #c9cddd); } .ds-ww-mark { position: absolute; top: 0; width: 2px; height: 12px; transform: translateX(-50%); border-radius: 9999px; background-color: var(--color-failed, #b42318); } .ds-ww-scale { position: relative; height: 14px; font-size: 11px; line-height: 1; color: var(--color-muted, #5f6684); font-variant-numeric: tabular-nums; } .ds-ww-scale span { position: absolute; } .ds-ww-scale span:nth-child(1) { left: 0; } .ds-ww-scale span:nth-child(2) { left: 33.3333%; transform: translateX(-50%); } .ds-ww-scale span:nth-child(3) { right: 0; }"
+    },
+    {
+      "name": "Period Rail",
+      "kind": "card",
+      "refersTo": "period-rail",
+      "description": "The one white panel: each metric's current value over the previous period's, tabular, on hairlines, with the counting rules printed underneath.",
+      "html": "<section class=\"ds-rail\"><div class=\"ds-rail-head\"><h2>This month</h2><p>vs last month</p></div><dl><div class=\"ds-rail-row\"><dt>Deploys</dt><dd><span class=\"ds-rail-now\">9</span><span class=\"ds-rail-before\">6 last month</span></dd></div><div class=\"ds-rail-row\"><dt>Lead time, median</dt><dd><span class=\"ds-rail-now\">19 h</span><span class=\"ds-rail-before\">31 h last month</span></dd></div><div class=\"ds-rail-row\"><dt>Failure rate</dt><dd><span class=\"ds-rail-now\">1 of 9</span><span class=\"ds-rail-before\">2 of 6 last month</span></dd></div></dl><div class=\"ds-rail-rules\"><p><b>A release day</b> is a day with at least one production deploy.</p><p><b>A production deploy fails</b> when, within 72 hours, it gets a new error, a hotfix or a rollback.</p></div></section>",
+      "css": ".ds-rail { padding: 20px; border: 1px solid var(--color-line, #e3e5ee); border-radius: var(--radius-panel, 12px); background-color: var(--color-panel, #ffffff); font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); color: var(--color-body, #3c4366); } .ds-rail-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; } .ds-rail-head h2 { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--color-ink, #0d1a55); } .ds-rail-head p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--color-muted, #5f6684); } .ds-rail dl { margin: 8px 0 0; } .ds-rail-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 12px 0; } .ds-rail-row + .ds-rail-row { border-top: 1px solid var(--color-line, #e3e5ee); } .ds-rail dt { font-size: 14px; line-height: 1.5; color: var(--color-body, #3c4366); } .ds-rail dd { flex-shrink: 0; margin: 0; text-align: right; } .ds-rail-now { display: block; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--color-ink, #0d1a55); font-variant-numeric: tabular-nums; } .ds-rail-before { display: block; font-size: 12px; line-height: 1.5; color: var(--color-muted, #5f6684); font-variant-numeric: tabular-nums; } .ds-rail-rules { display: grid; gap: 8px; margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--color-line, #e3e5ee); font-size: 13px; line-height: 1.625; color: var(--color-muted, #5f6684); } .ds-rail-rules p { margin: 0; } .ds-rail-rules b { font-weight: 600; color: var(--color-body, #3c4366); }"
+    },
+    {
+      "name": "Empty State",
+      "kind": "card",
+      "refersTo": "empty-state",
+      "description": "Dashed Navy Rule frame with no fill: one navy line for what is missing, one line for what will appear there and when.",
+      "html": "<div class=\"ds-empty\"><p class=\"ds-empty-title\">No deploys to staging yet.</p><p class=\"ds-empty-text\">When something ships there, it shows up here with its 72-hour watch window, and the summary above says whether it hurt anything.</p></div>",
+      "css": ".ds-empty { padding: 32px 20px; border: 1px dashed var(--color-line-strong, #c9cddd); border-radius: var(--radius-panel, 12px); font-family: var(--font-sans, \"Manrope Variable\", \"Manrope\", ui-sans-serif, system-ui, sans-serif); } .ds-empty-title { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.5; color: var(--color-ink, #0d1a55); } .ds-empty-text { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: var(--color-body, #3c4366); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Annotated Ledger",
+    "overview": "The system is built for reading evidence. A ledger of production deploys sits on the page, and its annotation is written above it in plain words: one sentence in large navy type gives the answer, short claims give the reasons, and each claim links down to the row that proves it. Figures come after the words, and a period's figures always stand next to the period before. Every device on the page either states a fact or shows where the fact came from.\n\nThe material is Cloudnonic's own and deliberately plain: navy on a cool paper grey and white, Manrope for every glyph, 1px navy-tinted hairlines in place of boxes and shadows. The density is that of a well-kept table: one loud line, then a tight ladder from 11 to 17px where the evidence lives. Colour is spent on meaning only: navy for what a reader acts on, green, amber and red for state, a pale navy wash for whatever is linked or has just been reached, and a hatch where data is missing.\n\nIt is an internal tool for people who come back after every deploy, so nothing is there to impress. Motion is a 150ms colour change; the one authored moment is the highlight a row plays when a claim's link lands on it. The board holds to WCAG 2.1 AA, never carries state by colour alone and respects reduced motion. Confirmed rejection: the KPI-tile dashboard and its card grids; figures live in rows and in the period rail.",
+    "keyCharacteristics": [
+      "Words before numbers: one navy sentence at display size answers the page, and no metric is set above 15px.",
+      "Cloudnonic navy on paper grey and white, with the Cloudnonic cloud mark and Manrope as binding identity.",
+      "A flat ledger: a tone step from ground to white and 1px navy-tinted hairlines, never a shadow.",
+      "Three state colours, each always paired with an icon and words; missing data is hatched and named.",
+      "Watch windows drawn as 72-hour timelines with the 24 h mark at one third.",
+      "Tabular figures only where figures stack.",
+      "Motion is colour; the row arrival is the only authored moment."
+    ],
+    "rules": [
+      {
+        "name": "The Navy Voice Rule",
+        "body": "Navy is the only brand colour and there is no second accent. What a reader should act on or remember is navy; everything else is a navy-tinted grey or a state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three States Rule",
+        "body": "Green, amber and red mean clean, watching and failed, and nothing else. They colour text, icons and timeline strokes on the surface they sit on, always next to an icon and words.",
+        "section": "colors"
+      },
+      {
+        "name": "The Hatched Absence Rule",
+        "body": "Missing data is drawn as a hatch (1px Navy Rule stripes at 135 degrees, every 6px) and named \"No data\". It is never drawn as zero, an empty track or a grey bar.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Manrope sets every glyph: the verdict, figures, times and versions (tags or SHAs). There is no monospace; a version is a name, set at 13px medium beside its service.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stacked Figures Rule",
+        "body": "Tabular figures and short units (\"68 h\", \"2.4 d\") are only for figures that stack: verdict labels, period values, the 0/24/72 h scale. Inside sentences figures stay proportional, units are spelled out (\"68 hours of its watch left\") and small counts are words (\"two new errors\").",
+        "section": "typography"
+      },
+      {
+        "name": "The Words Over Numbers Rule",
+        "body": "Display size belongs to a sentence that answers the page's question, never to a number on its own. No metric on the board is set above 15px.",
+        "section": "typography"
+      },
+      {
+        "name": "The Inset Highlight Rule",
+        "body": "Anything that can be highlighted carries 12px of horizontal padding, so the wash never touches its text. Rows sit 12px inside their list; claims pull their padding outward with a negative margin, so their text keeps the column edge.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Ledger Rule",
+        "body": "No shadows, no lifts. A surface separates from the ground by turning white and taking a 1px navy-tinted hairline, and a row separates from its neighbour by a hairline alone.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Containment Radius Rule",
+        "body": "Radius follows what an element contains: 12px for panels, 8px for blocks, 6px for controls, 4px for the smallest shapes, including anything inside a control. Round caps belong only to the timeline's strokes and ticks.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Colour-Not-Movement Rule",
+        "body": "Interaction changes colour, never position or size. The only movement is a 0.97 press on the org segments, and only when the reader has not asked for reduced motion; the only authored moment is the row arrival.",
+        "section": "components"
+      },
+      {
+        "name": "The Linked Highlight Rule",
+        "body": "A claim and its row are one thing in two places. Pointing at either one, or focusing the claim's link, washes both in Navy Wash; following the link lands on the row with the arrival highlight.",
+        "section": "components"
+      },
+      {
+        "name": "The 72-Hour Window Rule",
+        "body": "Every watch is drawn on the same 72-hour line with its 24 h mark at one third, so windows compare by eye down a column: elapsed time in the state colour, events as red ticks, absence as hatch.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do set pages on Paper Grey (#f7f7f7) and keep Sheet White (#ffffff) for the header bar, contained panels and controls.",
+      "Do answer in a sentence first: Display type in navy (700, 2.5rem from 1024px, -0.025em, line-height 1.1, balanced), with every claim linked to the row that proves it.",
+      "Do pair every state colour with its Phosphor bold icon and words: check circle for clean, eye for watching, warning circle for failed, prohibit for no data.",
+      "Do draw missing data as the hatch and name it \"No data\"; an open window reads \"Watching, N h left\", never zero.",
+      "Do use tabular figures and short units only where figures stack: verdict labels, period values, the time scale.",
+      "Do keep text at 4.5:1 or better on Paper Grey, Sheet White and Navy Wash; Faded Slate on Navy Wash (4.78:1) is the lowest pair in use.",
+      "Do show focus as a 2px solid navy outline at 2px offset.",
+      "Do keep transitions to colour, 150ms on the ease-out curve (cubic-bezier(0.23, 1, 0.32, 1)); put any press scale (0.97) behind motion-safe and leave the arrival highlight static under reduced motion."
+    ],
+    "donts": [
+      "Don't build KPI tiles or card grids; figures live in rows and in the period rail, where each current value sits over the previous period's.",
+      "Don't give a number display size; no metric is set above 15px.",
+      "Don't introduce a monospace face for versions, SHAs or times.",
+      "Don't add shadows; separate with a tone step and a 1px navy-tinted hairline.",
+      "Don't add a second accent hue, or use green, amber or red for anything but state.",
+      "Don't carry state by colour alone.",
+      "Don't draw missing data as zero, an empty track or a blank cell.",
+      "Don't move or resize anything on hover or focus; interaction changes colour."
+    ]
+  }
+}
