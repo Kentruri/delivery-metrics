@@ -37,6 +37,15 @@ pnpm dev                          # http://localhost:3000/v1/health
 
 `pnpm sync -- --dry-run --out ./history` syncs into memory only and writes `tensorparc-deploys.csv` and `tensorparc-monthly.csv`: the 2026 history without a database.
 
+## Deploy on Vercel
+
+One Vercel project serves the board and the API from the repo root. `vercel.json` runs `pnpm build`, then `scripts/vercel-build.mjs` writes the Build Output API folder: the board as static files and the API as one Node function at `/api` (`apps/api/src/vercel.ts`). The board keeps calling `/api/v1/...`, so the session cookie stays first-party.
+
+1. Database: create a Neon Postgres from the project's Storage tab. It sets `DATABASE_URL`.
+2. Variables (Production): `APP_PASSWORD_HASH`, `SESSION_SECRET`, `SYNC_API_KEY`, `HISTORY_SINCE` and the `TP_*` tokens. Leave out `DATABASE_URL`, `NODE_ENV`, `HOST` and `PORT`.
+3. Deploy with `vercel deploy --prod` from the repo root. `.vercelignore` keeps `.env`, `node_modules` and the build folders out of the upload.
+4. Daily sync: set the repository secrets `API_ORIGIN` to `https://<domain>/api` and `SYNC_API_KEY`. The function runs for up to 300 seconds; if a sync needs longer, run `pnpm sync` against the same database instead.
+
 ## Endpoints
 
 | Endpoint                                  | Access                               | Does                                                                      |
